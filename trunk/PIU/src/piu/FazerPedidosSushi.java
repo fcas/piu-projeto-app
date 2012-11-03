@@ -23,7 +23,7 @@ public class FazerPedidosSushi extends javax.swing.JFrame {
         
     }
     
-        ImageIcon imagem = new ImageIcon("src/imagens/sushi.jpg");
+        ImageIcon imagem = new ImageIcon("src/Imagens/sushi.jpg");
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
