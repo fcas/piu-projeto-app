@@ -4,6 +4,7 @@
  */
 package piu;
 
+import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 
 /**
@@ -18,11 +19,12 @@ public class ComidaEmCasaAPP extends javax.swing.JFrame {
     public ComidaEmCasaAPP() {
         initComponents();
         CB.setMaximumRowCount(2);
+        im.setIcon(imagem);
         
         //CB = new JComboBox(ComboBox);
         
     }
-    String ComboBox[] = {"Escolher Restaurante", "Rest. Comidas Típicas"};
+        ImageIcon imagem = new ImageIcon("src/imagens/I.jpg");
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -35,7 +37,7 @@ public class ComidaEmCasaAPP extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         CB = new javax.swing.JComboBox();
-        jLabel2 = new javax.swing.JLabel();
+        im = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -46,7 +48,7 @@ public class ComidaEmCasaAPP extends javax.swing.JFrame {
 
         CB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Escolher Restaurante", "Rest. Comidas Típicas" }));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Desktop\\im50.jpg")); // NOI18N
+        im.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\I.jpg")); // NOI18N
 
         jButton1.setText("Acesso para Restaurantes");
 
@@ -55,24 +57,22 @@ public class ComidaEmCasaAPP extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addComponent(jLabel1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel2)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
                 .addGap(83, 83, 83)
                 .addComponent(CB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(im)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -82,7 +82,7 @@ public class ComidaEmCasaAPP extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(CB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
+                .addComponent(im)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap())
@@ -127,8 +127,8 @@ public class ComidaEmCasaAPP extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox CB;
+    private javax.swing.JLabel im;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
