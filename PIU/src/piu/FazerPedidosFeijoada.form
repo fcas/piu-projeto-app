@@ -81,7 +81,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="13" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -167,6 +167,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="im_Feijoada">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="2" name="C:\Users\Dalay\Documents\NetBeansProjects\PIU\src\Imagens\feijoada.jpg"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="label_Qtd">
       <Properties>
