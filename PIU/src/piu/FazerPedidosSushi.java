@@ -17,9 +17,9 @@ public class FazerPedidosSushi extends javax.swing.JFrame {
      */
     public FazerPedidosSushi() {
         initComponents();
-        card.setEnabled(false);
+        button_Cardapio.setEnabled(false);
         preco.setEditable(false);
-        im.setIcon(imagem);
+        im_Sushi.setIcon(imagem);
         
     }
     
@@ -33,126 +33,125 @@ public class FazerPedidosSushi extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        card = new javax.swing.JButton();
-        FL = new javax.swing.JButton();
-        inicio = new javax.swing.JButton();
-        contatos = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        im = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        label_FazerPedidos = new javax.swing.JLabel();
+        button_Cardapio = new javax.swing.JButton();
+        button_FazerLogin = new javax.swing.JButton();
+        button_Inicio = new javax.swing.JButton();
+        button_Contato = new javax.swing.JButton();
+        label_Sushi = new javax.swing.JLabel();
+        im_Sushi = new javax.swing.JLabel();
+        label_Qtd = new javax.swing.JLabel();
         preco = new javax.swing.JTextField();
-        contador = new javax.swing.JSpinner();
-        jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        label_Preco = new javax.swing.JLabel();
+        spinner_Contador = new javax.swing.JSpinner();
+        label_Descricao = new javax.swing.JLabel();
+        button_AddPedido = new javax.swing.JButton();
+        button_FecharCompra = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("Fazer Pedidos");
+        label_FazerPedidos.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        label_FazerPedidos.setText("Fazer Pedidos");
 
-        card.setText("Cardápio");
+        button_Cardapio.setText("Cardápio");
 
-        FL.setText("Fazer Login");
+        button_FazerLogin.setText("Fazer Login");
 
-        inicio.setText("Inicio");
+        button_Inicio.setText("Inicio");
 
-        contatos.setText("Contato");
+        button_Contato.setText("Contato");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Sushi");
+        label_Sushi.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        label_Sushi.setText("Sushi");
 
-        im.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\sushi.jpg")); // NOI18N
+        label_Qtd.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        label_Qtd.setText("Qtd.:");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("Qtd.:");
+        label_Preco.setText("Preço:");
 
-        jLabel5.setText("Preço:");
+        label_Descricao.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        label_Descricao.setText("Descrição: Sushi de salmão.");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel6.setText("Descrição: Sushi de salmão.");
+        button_AddPedido.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        button_AddPedido.setText("Add Pedido");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton1.setText("Add Pedido");
-
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton2.setText("Fechar Compra");
+        button_FecharCompra.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        button_FecharCompra.setText("Fechar Compra");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(52, 52, 52)
-                .addComponent(jButton2)
-                .addGap(28, 28, 28))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(inicio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(card)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(FL)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(contatos)
-                .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(68, 68, 68)
-                        .addComponent(jLabel6))
+                        .addComponent(label_Descricao))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(176, 176, 176)
-                        .addComponent(jLabel5)
+                        .addComponent(label_Preco)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(preco, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(82, 82, 82)
-                        .addComponent(jLabel1))
+                        .addComponent(label_FazerPedidos))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(136, 136, 136)
-                        .addComponent(jLabel2))
+                        .addComponent(label_Sushi))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(45, 45, 45)
-                        .addComponent(im))
+                        .addComponent(im_Sushi))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(49, 49, 49)
-                        .addComponent(jLabel4)
+                        .addComponent(label_Qtd)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(contador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(spinner_Contador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(button_AddPedido)
+                        .addGap(52, 52, 52)
+                        .addComponent(button_FecharCompra)
+                        .addGap(28, 28, 28))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(button_Inicio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(button_Cardapio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(button_FazerLogin)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(button_Contato)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jLabel1)
+                .addComponent(label_FazerPedidos)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inicio)
-                    .addComponent(card)
-                    .addComponent(FL)
-                    .addComponent(contatos))
+                    .addComponent(button_Inicio)
+                    .addComponent(button_Cardapio)
+                    .addComponent(button_FazerLogin)
+                    .addComponent(button_Contato))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
+                .addComponent(label_Sushi)
                 .addGap(27, 27, 27)
-                .addComponent(im)
+                .addComponent(im_Sushi)
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
+                    .addComponent(label_Qtd)
+                    .addComponent(label_Preco)
                     .addComponent(preco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(contador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(spinner_Contador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel6)
+                .addComponent(label_Descricao)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(button_AddPedido)
+                    .addComponent(button_FecharCompra))
                 .addGap(46, 46, 46))
         );
 
@@ -194,19 +193,19 @@ public class FazerPedidosSushi extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton FL;
-    private javax.swing.JButton card;
-    private javax.swing.JSpinner contador;
-    private javax.swing.JButton contatos;
-    private javax.swing.JLabel im;
-    private javax.swing.JButton inicio;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JButton button_AddPedido;
+    private javax.swing.JButton button_Cardapio;
+    private javax.swing.JButton button_Contato;
+    private javax.swing.JButton button_FazerLogin;
+    private javax.swing.JButton button_FecharCompra;
+    private javax.swing.JButton button_Inicio;
+    private javax.swing.JLabel im_Sushi;
+    private javax.swing.JLabel label_Descricao;
+    private javax.swing.JLabel label_FazerPedidos;
+    private javax.swing.JLabel label_Preco;
+    private javax.swing.JLabel label_Qtd;
+    private javax.swing.JLabel label_Sushi;
     private javax.swing.JTextField preco;
+    private javax.swing.JSpinner spinner_Contador;
     // End of variables declaration//GEN-END:variables
 }

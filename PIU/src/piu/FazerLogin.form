@@ -26,7 +26,7 @@
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="label_Senha" min="-2" max="-2" attributes="0"/>
                   <Component id="label_Usuario" min="-2" max="-2" attributes="0"/>
-                  <Component id="button_inicio" min="-2" max="-2" attributes="0"/>
+                  <Component id="button_Inicio" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -38,8 +38,8 @@
                       <Component id="button_Contato" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="text_senhaCliente" pref="216" max="32767" attributes="0"/>
-                      <Component id="text_usuarioCliente" max="32767" attributes="0"/>
+                      <Component id="text_SenhaCliente" pref="216" max="32767" attributes="0"/>
+                      <Component id="text_UsuarioCliente" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -51,9 +51,9 @@
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="button_loginCliente" min="-2" max="-2" attributes="0"/>
+              <Component id="button_LoginCliente" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-              <Component id="button_cadastrarCliente" min="-2" max="-2" attributes="0"/>
+              <Component id="button_CadastrarCliente" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -65,7 +65,7 @@
               <Component id="label_FazerLogin" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="button_inicio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="button_Inicio" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="button_Cardapio" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="button_FazerLogin" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="button_Contato" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -73,17 +73,17 @@
               <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="label_Usuario" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="text_usuarioCliente" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                  <Component id="text_UsuarioCliente" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="label_Senha" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="text_senhaCliente" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="text_SenhaCliente" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="button_loginCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="button_cadastrarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="button_LoginCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="button_CadastrarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="110" max="32767" attributes="0"/>
           </Group>
@@ -99,7 +99,7 @@
         <Property name="text" type="java.lang.String" value="Fazer Login"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="button_inicio">
+    <Component class="javax.swing.JButton" name="button_Inicio">
       <Properties>
         <Property name="text" type="java.lang.String" value="Inicio"/>
       </Properties>
@@ -135,21 +135,21 @@
         <Property name="text" type="java.lang.String" value="Senha:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="text_usuarioCliente">
+    <Component class="javax.swing.JTextField" name="text_UsuarioCliente">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="text_senhaCliente">
+    <Component class="javax.swing.JTextField" name="text_SenhaCliente">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="button_loginCliente">
+    <Component class="javax.swing.JButton" name="button_LoginCliente">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -157,7 +157,7 @@
         <Property name="text" type="java.lang.String" value="Login"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="button_cadastrarCliente">
+    <Component class="javax.swing.JButton" name="button_CadastrarCliente">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
