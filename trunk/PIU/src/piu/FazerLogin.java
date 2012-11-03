@@ -22,22 +22,9 @@ public class FazerLogin extends javax.swing.JFrame {
     public FazerLogin() {
         initComponents();
         button_FazerLogin.setEnabled(false);
-       // button_FazerLogin.addActionListener((ActionListener)this);
-      
     }
     
-    public void actionPerformed(ActionEvent ae) {
-        String value1 = text_UsuarioCliente.getText();
-        char[] value2 = passwordfield_SenhaCliente.getPassword();
-        if (value1.equals("felipe") && value2.equals("1234")) {
-            BemVindoCliente page = new BemVindoCliente();
-            page.setVisible(true);
-        } else {
-            System.out.println("enter the valid username and password");
-            JOptionPane.showMessageDialog(this, "Incorrect login or password",
-                    "Error", JOptionPane.ERROR_MESSAGE);
-        }
-    }
+    static String nome; 
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -83,6 +70,11 @@ public class FazerLogin extends javax.swing.JFrame {
 
         button_LoginCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         button_LoginCliente.setText("Login");
+        button_LoginCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_LoginClienteActionPerformed(evt);
+            }
+        });
 
         button_CadastrarCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         button_CadastrarCliente.setText("Cadastre-se");
@@ -156,6 +148,24 @@ public class FazerLogin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void button_LoginClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_LoginClienteActionPerformed
+        // TODO add your handling code here:
+        String value1 = text_UsuarioCliente.getText(); 
+        char[] value2 = passwordfield_SenhaCliente.getPassword();
+        char[] value3 = value2;
+        nome = value1; 
+        
+        if (value1.equals("felipe") && (value2 == value3)) {
+            BemVindoCliente page = new BemVindoCliente();
+            page.setVisible(true);
+            this.dispose();
+        } else {
+            System.out.println("enter the valid username and password");
+            JOptionPane.showMessageDialog(this, "Usuário ou senha incorreto",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_button_LoginClienteActionPerformed
 
     /**
      * @param args the command line arguments
