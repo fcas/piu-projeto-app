@@ -18,8 +18,8 @@ public class ComidaEmCasaAPP extends javax.swing.JFrame {
      */
     public ComidaEmCasaAPP() {
         initComponents();
-        CB.setMaximumRowCount(2);
-        im.setIcon(imagem);
+        cb_escolherRestaurante.setMaximumRowCount(2);
+        im_ComidaEmCasaAPP.setIcon(imagem);
         
         //CB = new JComboBox(ComboBox);
         
@@ -35,22 +35,20 @@ public class ComidaEmCasaAPP extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        CB = new javax.swing.JComboBox();
-        im = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        label_ComidaEmCasaAPP = new javax.swing.JLabel();
+        cb_escolherRestaurante = new javax.swing.JComboBox();
+        im_ComidaEmCasaAPP = new javax.swing.JLabel();
+        button_acessoRestaurantes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel1.setText("Comida Em Casa APP");
+        label_ComidaEmCasaAPP.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        label_ComidaEmCasaAPP.setText("Comida Em Casa APP");
 
-        CB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Escolher Restaurante", "Rest. Comidas Típicas" }));
+        cb_escolherRestaurante.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Escolher Restaurante", "Rest. Comidas Típicas" }));
 
-        im.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\I.jpg")); // NOI18N
-
-        jButton1.setText("Acesso para Restaurantes");
+        button_acessoRestaurantes.setText("Acesso para Restaurantes");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -58,33 +56,33 @@ public class ComidaEmCasaAPP extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(83, 83, 83)
-                .addComponent(CB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cb_escolherRestaurante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1))
+                        .addComponent(button_acessoRestaurantes))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(35, 35, 35)
-                        .addComponent(jLabel1)
+                        .addComponent(label_ComidaEmCasaAPP)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(im)))
+                        .addComponent(im_ComidaEmCasaAPP)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jLabel1)
+                .addComponent(label_ComidaEmCasaAPP)
                 .addGap(18, 18, 18)
-                .addComponent(CB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cb_escolherRestaurante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(im)
+                .addComponent(im_ComidaEmCasaAPP)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(button_acessoRestaurantes)
                 .addContainerGap())
         );
 
@@ -126,9 +124,9 @@ public class ComidaEmCasaAPP extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox CB;
-    private javax.swing.JLabel im;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton button_acessoRestaurantes;
+    private javax.swing.JComboBox cb_escolherRestaurante;
+    private javax.swing.JLabel im_ComidaEmCasaAPP;
+    private javax.swing.JLabel label_ComidaEmCasaAPP;
     // End of variables declaration//GEN-END:variables
 }

@@ -28,23 +28,23 @@ public class FazerLogin extends javax.swing.JFrame {
     private void initComponents() {
 
         label_FazerLogin = new javax.swing.JLabel();
-        button_inicio = new javax.swing.JButton();
+        button_Inicio = new javax.swing.JButton();
         button_Cardapio = new javax.swing.JButton();
         button_FazerLogin = new javax.swing.JButton();
         button_Contato = new javax.swing.JButton();
         label_Usuario = new javax.swing.JLabel();
         label_Senha = new javax.swing.JLabel();
-        text_usuarioCliente = new javax.swing.JTextField();
-        text_senhaCliente = new javax.swing.JTextField();
-        button_loginCliente = new javax.swing.JButton();
-        button_cadastrarCliente = new javax.swing.JButton();
+        text_UsuarioCliente = new javax.swing.JTextField();
+        text_SenhaCliente = new javax.swing.JTextField();
+        button_LoginCliente = new javax.swing.JButton();
+        button_CadastrarCliente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         label_FazerLogin.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         label_FazerLogin.setText("Fazer Login");
 
-        button_inicio.setText("Inicio");
+        button_Inicio.setText("Inicio");
 
         button_Cardapio.setText("Cardápio");
 
@@ -58,15 +58,15 @@ public class FazerLogin extends javax.swing.JFrame {
         label_Senha.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_Senha.setText("Senha:");
 
-        text_usuarioCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        text_UsuarioCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        text_senhaCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        text_SenhaCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        button_loginCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        button_loginCliente.setText("Login");
+        button_LoginCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        button_LoginCliente.setText("Login");
 
-        button_cadastrarCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        button_cadastrarCliente.setText("Cadastre-se");
+        button_CadastrarCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        button_CadastrarCliente.setText("Cadastre-se");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -76,7 +76,7 @@ public class FazerLogin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(label_Senha)
                     .addComponent(label_Usuario)
-                    .addComponent(button_inicio))
+                    .addComponent(button_Inicio))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -86,8 +86,8 @@ public class FazerLogin extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(button_Contato))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(text_senhaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
-                        .addComponent(text_usuarioCliente)))
+                        .addComponent(text_SenhaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+                        .addComponent(text_UsuarioCliente)))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(90, 90, 90)
@@ -95,9 +95,9 @@ public class FazerLogin extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(button_loginCliente)
+                .addComponent(button_LoginCliente)
                 .addGap(65, 65, 65)
-                .addComponent(button_cadastrarCliente)
+                .addComponent(button_CadastrarCliente)
                 .addGap(43, 43, 43))
         );
         layout.setVerticalGroup(
@@ -107,22 +107,22 @@ public class FazerLogin extends javax.swing.JFrame {
                 .addComponent(label_FazerLogin)
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(button_inicio)
+                    .addComponent(button_Inicio)
                     .addComponent(button_Cardapio)
                     .addComponent(button_FazerLogin)
                     .addComponent(button_Contato))
                 .addGap(68, 68, 68)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_Usuario)
-                    .addComponent(text_usuarioCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_UsuarioCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_Senha)
-                    .addComponent(text_senhaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_SenhaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(73, 73, 73)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(button_loginCliente)
-                    .addComponent(button_cadastrarCliente))
+                    .addComponent(button_LoginCliente)
+                    .addComponent(button_CadastrarCliente))
                 .addContainerGap(110, Short.MAX_VALUE))
         );
 
@@ -164,16 +164,16 @@ public class FazerLogin extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton button_CadastrarCliente;
     private javax.swing.JButton button_Cardapio;
     private javax.swing.JButton button_Contato;
     private javax.swing.JButton button_FazerLogin;
-    private javax.swing.JButton button_cadastrarCliente;
-    private javax.swing.JButton button_inicio;
-    private javax.swing.JButton button_loginCliente;
+    private javax.swing.JButton button_Inicio;
+    private javax.swing.JButton button_LoginCliente;
     private javax.swing.JLabel label_FazerLogin;
     private javax.swing.JLabel label_Senha;
     private javax.swing.JLabel label_Usuario;
-    private javax.swing.JTextField text_senhaCliente;
-    private javax.swing.JTextField text_usuarioCliente;
+    private javax.swing.JTextField text_SenhaCliente;
+    private javax.swing.JTextField text_UsuarioCliente;
     // End of variables declaration//GEN-END:variables
 }
