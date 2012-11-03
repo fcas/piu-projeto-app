@@ -4,6 +4,8 @@
  */
 package piu;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Dalay
@@ -16,8 +18,11 @@ public class FazerPedidosFeijoada extends javax.swing.JFrame {
     public FazerPedidosFeijoada() {
         initComponents();
         button_Cardapio.setEnabled(false);
+        
+        im_Feijoada.setIcon(imagem);
     }
-
+    
+        ImageIcon imagem = new ImageIcon("src/Imagens/feijoada.jpg");
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -59,6 +64,8 @@ public class FazerPedidosFeijoada extends javax.swing.JFrame {
 
         label_Feijoada.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_Feijoada.setText("Feijoada");
+
+        im_Feijoada.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\feijoada.jpg")); // NOI18N
 
         label_Qtd.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_Qtd.setText("Qtd.:");
@@ -129,7 +136,7 @@ public class FazerPedidosFeijoada extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(button_FecharCompra))
                                 .addComponent(label_Descricao2)))))
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(label_Descricao3)
