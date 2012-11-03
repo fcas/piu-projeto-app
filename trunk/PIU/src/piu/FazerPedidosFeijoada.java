@@ -17,7 +17,6 @@ public class FazerPedidosFeijoada extends javax.swing.JFrame {
      */
     public FazerPedidosFeijoada() {
         initComponents();
-        button_Cardapio.setEnabled(false);
         
         im_Feijoada.setIcon(imagem);
     }
