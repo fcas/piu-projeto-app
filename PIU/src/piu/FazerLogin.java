@@ -154,9 +154,10 @@ public class FazerLogin extends javax.swing.JFrame {
         String value1 = text_UsuarioCliente.getText(); 
         char[] value2 = passwordfield_SenhaCliente.getPassword();
         char[] value3 = value2;
+        String value4 = value1; 
         nome = value1; 
         
-        if (value1.equals("felipe") && (value2 == value3)) {
+        if ((value1 == value4) && (value2 == value3)) {
             BemVindoCliente page = new BemVindoCliente();
             page.setVisible(true);
             this.dispose();
