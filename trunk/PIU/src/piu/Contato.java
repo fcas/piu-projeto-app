@@ -48,16 +48,33 @@ public class Contato extends javax.swing.JFrame {
         button_FazerLogin.setText("Fazer Login");
 
         button_Cardapio.setText("Cardápio");
+        button_Cardapio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_CardapioActionPerformed(evt);
+            }
+        });
 
         button_Inicio.setText("Inicio");
+        button_Inicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_InicioActionPerformed(evt);
+            }
+        });
 
         button_Contato.setText("Contato");
+        button_Contato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_ContatoActionPerformed(evt);
+            }
+        });
 
         label_Endereco.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_Endereco.setText("Endereço: Rua dos Narnianos, 0");
 
         label_Telefone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_Telefone.setText("Telefone: 0101-1101");
+
+        im_Mapa.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\mapa.jpg")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,11 +123,26 @@ public class Contato extends javax.swing.JFrame {
                 .addComponent(label_Telefone)
                 .addGap(36, 36, 36)
                 .addComponent(im_Mapa)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void button_InicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_InicioActionPerformed
+        new ComidaEmCasaAPP().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_InicioActionPerformed
+
+    private void button_CardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_CardapioActionPerformed
+        new Pratos().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_CardapioActionPerformed
+
+    private void button_ContatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_ContatoActionPerformed
+        new Contato().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_ContatoActionPerformed
 
     /**
      * @param args the command line arguments

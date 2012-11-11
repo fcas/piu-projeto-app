@@ -45,10 +45,7 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                           <Component id="passwordfield_SenhaCliente" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -193,6 +190,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Contato"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_ContatoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="button_FazerLogin">
       <Properties>
@@ -203,11 +203,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Card&#xe1;pio"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_CardapioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="button_Inicio">
       <Properties>
         <Property name="text" type="java.lang.String" value="Inicio"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_InicioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>

@@ -88,9 +88,9 @@
                   <Component id="hr_chegada" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="t_restante" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="t_restante" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
@@ -114,6 +114,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Card&#xe1;pio"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_CardapioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -147,6 +150,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Contato"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_ContatoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="hr_saida">
     </Component>

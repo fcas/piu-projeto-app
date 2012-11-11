@@ -56,10 +56,20 @@ public class AcompanharPedido extends javax.swing.JFrame {
         });
 
         button_Cardapio.setText("Cardápio");
+        button_Cardapio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_CardapioActionPerformed(evt);
+            }
+        });
 
         button_FazerLogout.setText("Fazer Logout");
 
         button_Contato.setText("Contato");
+        button_Contato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_ContatoActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         jLabel1.setText("Acompanhar Pedido");
@@ -73,8 +83,6 @@ public class AcompanharPedido extends javax.swing.JFrame {
         jButton1.setText("Confirmar pedido");
 
         jButton2.setText("Cancelar pedido");
-
-        mapa.setIcon(new javax.swing.ImageIcon("/home/felipe/NetBeansProjects/piu-projeto/trunk/trunk/PIU/src/imagens/mapa.png")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -155,8 +163,19 @@ public class AcompanharPedido extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void button_InicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_InicioActionPerformed
-        // TODO add your handling code here:
+        new ComidaEmCasaAPP().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_button_InicioActionPerformed
+
+    private void button_CardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_CardapioActionPerformed
+        new Pratos().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_CardapioActionPerformed
+
+    private void button_ContatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_ContatoActionPerformed
+        new Contato().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_ContatoActionPerformed
 
     /**
      * @param args the command line arguments

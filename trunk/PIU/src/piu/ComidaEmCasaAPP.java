@@ -18,8 +18,8 @@ public class ComidaEmCasaAPP extends javax.swing.JFrame {
      */
     public ComidaEmCasaAPP() {
         initComponents();
-        cb_escolherRestaurante.setMaximumRowCount(2);
-        cb_escolherRestaurante.setName("Endereço de entrega");
+        cb.setMaximumRowCount(2);
+        cb.setName("Endereço de entrega");
         im_ComidaEmCasaAPP.setIcon(imagem);
         
         //CB = new JComboBox(ComboBox);
@@ -37,7 +37,7 @@ public class ComidaEmCasaAPP extends javax.swing.JFrame {
     private void initComponents() {
 
         label_ComidaEmCasaAPP = new javax.swing.JLabel();
-        cb_escolherRestaurante = new javax.swing.JComboBox();
+        cb = new javax.swing.JComboBox();
         im_ComidaEmCasaAPP = new javax.swing.JLabel();
         button_acessoRestaurantes = new javax.swing.JButton();
 
@@ -47,10 +47,22 @@ public class ComidaEmCasaAPP extends javax.swing.JFrame {
         label_ComidaEmCasaAPP.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         label_ComidaEmCasaAPP.setText("Comida Em Casa APP");
 
-        cb_escolherRestaurante.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Escolher Restaurante", "Rest. Comidas Típicas" }));
-        cb_escolherRestaurante.setToolTipText("");
+        cb.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Escolher Restaurante", "Rest. Comidas Típicas" }));
+        cb.setToolTipText("");
+        cb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbActionPerformed(evt);
+            }
+        });
+
+        im_ComidaEmCasaAPP.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\I.jpg")); // NOI18N
 
         button_acessoRestaurantes.setText("Acesso para Restaurantes");
+        button_acessoRestaurantes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_acessoRestaurantesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -60,18 +72,17 @@ public class ComidaEmCasaAPP extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(35, 35, 35)
-                        .addComponent(label_ComidaEmCasaAPP)
-                        .addGap(0, 57, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(label_ComidaEmCasaAPP))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(106, 106, 106)
+                        .addComponent(cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addComponent(im_ComidaEmCasaAPP)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(button_acessoRestaurantes)
-                    .addComponent(cb_escolherRestaurante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(button_acessoRestaurantes))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -79,18 +90,32 @@ public class ComidaEmCasaAPP extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addComponent(label_ComidaEmCasaAPP)
                 .addGap(18, 18, 18)
-                .addComponent(cb_escolherRestaurante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(im_ComidaEmCasaAPP)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(button_acessoRestaurantes)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        cb_escolherRestaurante.getAccessibleContext().setAccessibleName("");
+        cb.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void button_acessoRestaurantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_acessoRestaurantesActionPerformed
+        new AcessoParaRestaurantes().setVisible(true);
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_button_acessoRestaurantesActionPerformed
+
+    private void cbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbActionPerformed
+        if (cb.getSelectedItem() == "Rest. Comidas Típicas"){
+            new RestauranteComidasTipicas().setVisible(true);
+            this.dispose();
+        }
+        else{
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_cbActionPerformed
 
     /**
      * @param args the command line arguments
@@ -128,7 +153,7 @@ public class ComidaEmCasaAPP extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton button_acessoRestaurantes;
-    private javax.swing.JComboBox cb_escolherRestaurante;
+    private javax.swing.JComboBox cb;
     private javax.swing.JLabel im_ComidaEmCasaAPP;
     private javax.swing.JLabel label_ComidaEmCasaAPP;
     // End of variables declaration//GEN-END:variables

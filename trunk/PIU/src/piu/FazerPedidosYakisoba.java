@@ -4,6 +4,8 @@
  */
 package piu;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Dalay
@@ -15,7 +17,17 @@ public class FazerPedidosYakisoba extends javax.swing.JFrame {
      */
     public FazerPedidosYakisoba() {
         initComponents();
+        im.setIcon(imagem);
+        text_Preco.setEditable(false);
+        
+        text_Preco.setText(preco+"");
+    text_Preco.setText(preco*mult+"");
     }
+        float preco = (float) 49.99;
+        float precoi = (float) 49.99;
+        int mult = 0;
+    
+        ImageIcon imagem = new ImageIcon("src/Imagens/yakisoba.jpg");
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -32,7 +44,7 @@ public class FazerPedidosYakisoba extends javax.swing.JFrame {
         label_FazerPedidos = new javax.swing.JLabel();
         button_Inicio = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        im = new javax.swing.JLabel();
         label_Descricao3 = new javax.swing.JLabel();
         label_Descricao = new javax.swing.JLabel();
         label_Descricao2 = new javax.swing.JLabel();
@@ -40,26 +52,42 @@ public class FazerPedidosYakisoba extends javax.swing.JFrame {
         button_AddPedido = new javax.swing.JButton();
         label_Preco = new javax.swing.JLabel();
         text_Preco = new javax.swing.JTextField();
-        spinner_Contador = new javax.swing.JSpinner();
+        sp = new javax.swing.JSpinner();
         label_Qtd = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         button_Cardapio.setText("Cardápio");
+        button_Cardapio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_CardapioActionPerformed(evt);
+            }
+        });
 
         button_FazerLogin.setText("Fazer Login");
 
         button_Contato.setText("Contato");
+        button_Contato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_ContatoActionPerformed(evt);
+            }
+        });
 
         label_FazerPedidos.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         label_FazerPedidos.setText("Fazer Pedidos");
 
         button_Inicio.setText("Inicio");
+        button_Inicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_InicioActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Yakisoba");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\yakisoba.jpg")); // NOI18N
+        im.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\yakisoba.jpg")); // NOI18N
 
         label_Descricao3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_Descricao3.setText("temperados com molho shoyu");
@@ -78,6 +106,12 @@ public class FazerPedidosYakisoba extends javax.swing.JFrame {
 
         label_Preco.setText("Preço:");
 
+        sp.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                spStateChanged(evt);
+            }
+        });
+
         label_Qtd.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_Qtd.setText("Qtd.:");
 
@@ -94,27 +128,20 @@ public class FazerPedidosYakisoba extends javax.swing.JFrame {
                 .addGap(18, 18, 18))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(72, 72, 72)
-                                .addComponent(label_FazerPedidos)
-                                .addGap(53, 53, 53))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel2)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(button_Inicio)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(button_Cardapio)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(button_FazerLogin)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(button_Contato))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(129, 129, 129)
-                        .addComponent(jLabel1))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(82, 82, 82)
+                            .addComponent(label_FazerPedidos)
+                            .addGap(53, 53, 53))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(button_Inicio)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(button_Cardapio)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(button_FazerLogin)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(button_Contato)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(38, 38, 38)
                         .addComponent(button_AddPedido)
@@ -124,34 +151,47 @@ public class FazerPedidosYakisoba extends javax.swing.JFrame {
                         .addGap(43, 43, 43)
                         .addComponent(label_Qtd)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spinner_Contador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(sp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(61, 61, 61)
                         .addComponent(label_Preco)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_Preco, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(text_Preco, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel1)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(im)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(label_FazerPedidos)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(button_Inicio)
-                    .addComponent(button_Cardapio)
-                    .addComponent(button_FazerLogin)
-                    .addComponent(button_Contato))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(label_FazerPedidos)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(button_Inicio)
+                            .addComponent(button_Cardapio)
+                            .addComponent(button_FazerLogin)
+                            .addComponent(button_Contato))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel1))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel3)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(im)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_Qtd)
                     .addComponent(label_Preco)
                     .addComponent(text_Preco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(spinner_Contador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(sp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(label_Descricao)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -167,6 +207,27 @@ public class FazerPedidosYakisoba extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void button_InicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_InicioActionPerformed
+        new ComidaEmCasaAPP().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_InicioActionPerformed
+
+    private void button_CardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_CardapioActionPerformed
+        new Pratos().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_CardapioActionPerformed
+
+    private void button_ContatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_ContatoActionPerformed
+        new Contato().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_ContatoActionPerformed
+
+    private void spStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spStateChanged
+        mult = (int) sp.getValue();
+        preco = mult*precoi;
+        text_Preco.setText(preco+"");      // TODO add your handling code here:
+    }//GEN-LAST:event_spStateChanged
 
     /**
      * @param args the command line arguments
@@ -209,15 +270,16 @@ public class FazerPedidosYakisoba extends javax.swing.JFrame {
     private javax.swing.JButton button_FazerLogin;
     private javax.swing.JButton button_FecharCompra;
     private javax.swing.JButton button_Inicio;
+    private javax.swing.JLabel im;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel label_Descricao;
     private javax.swing.JLabel label_Descricao2;
     private javax.swing.JLabel label_Descricao3;
     private javax.swing.JLabel label_FazerPedidos;
     private javax.swing.JLabel label_Preco;
     private javax.swing.JLabel label_Qtd;
-    private javax.swing.JSpinner spinner_Contador;
+    private javax.swing.JSpinner sp;
     private javax.swing.JTextField text_Preco;
     // End of variables declaration//GEN-END:variables
 }
