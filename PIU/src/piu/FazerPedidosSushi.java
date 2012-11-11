@@ -17,10 +17,15 @@ public class FazerPedidosSushi extends javax.swing.JFrame {
      */
     public FazerPedidosSushi() {
         initComponents();
-        preco.setEditable(false);
+        text_Preco.setEditable(false);
         im_Sushi.setIcon(imagem);
         
+        text_Preco.setText(preco+"");
+    text_Preco.setText(preco*mult+"");
     }
+        float preco = (float) 49.99;
+        float precoi = (float) 49.99;
+        int mult = 0;
     
         ImageIcon imagem = new ImageIcon("src/Imagens/sushi.jpg");
     /**
@@ -40,9 +45,9 @@ public class FazerPedidosSushi extends javax.swing.JFrame {
         label_Sushi = new javax.swing.JLabel();
         im_Sushi = new javax.swing.JLabel();
         label_Qtd = new javax.swing.JLabel();
-        preco = new javax.swing.JTextField();
+        text_Preco = new javax.swing.JTextField();
         label_Preco = new javax.swing.JLabel();
-        spinner_Contador = new javax.swing.JSpinner();
+        sp = new javax.swing.JSpinner();
         label_Descricao = new javax.swing.JLabel();
         button_AddPedido = new javax.swing.JButton();
         button_FecharCompra = new javax.swing.JButton();
@@ -53,22 +58,43 @@ public class FazerPedidosSushi extends javax.swing.JFrame {
         label_FazerPedidos.setText("Fazer Pedidos");
 
         button_Cardapio.setText("Cardápio");
+        button_Cardapio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_CardapioActionPerformed(evt);
+            }
+        });
 
         button_FazerLogin.setText("Fazer Login");
 
         button_Inicio.setText("Inicio");
+        button_Inicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_InicioActionPerformed(evt);
+            }
+        });
 
         button_Contato.setText("Contato");
+        button_Contato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_ContatoActionPerformed(evt);
+            }
+        });
 
         label_Sushi.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_Sushi.setText("Sushi");
 
-        im_Sushi.setIcon(new javax.swing.ImageIcon("/home/felipe/NetBeansProjects/piu-projeto/trunk/trunk/PIU/src/imagens/sushi.jpg")); // NOI18N
+        im_Sushi.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\sushi.jpg")); // NOI18N
 
         label_Qtd.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_Qtd.setText("Qtd.:");
 
         label_Preco.setText("Preço:");
+
+        sp.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                spStateChanged(evt);
+            }
+        });
 
         label_Descricao.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_Descricao.setText("Descrição: Sushi de salmão.");
@@ -85,15 +111,6 @@ public class FazerPedidosSushi extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(24, Short.MAX_VALUE)
-                        .addComponent(button_Inicio)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(button_Cardapio)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(button_FazerLogin)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(button_Contato))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -102,35 +119,40 @@ public class FazerPedidosSushi extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(47, 47, 47)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGap(14, 14, 14)
+                                    .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(im_Sushi)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addGap(87, 87, 87)
-                                                .addComponent(label_Sushi))))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addGap(127, 127, 127)
-                                                    .addComponent(label_Preco)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(preco, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(label_Qtd)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(spinner_Contador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addGap(5, 5, 5))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                            .addComponent(button_AddPedido)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(button_FecharCompra))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                            .addGap(33, 33, 33)
-                                            .addComponent(label_Descricao)
-                                            .addGap(17, 17, 17))))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                                .addGap(127, 127, 127)
+                                                .addComponent(label_Preco)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(text_Preco, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(label_Qtd)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(sp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(5, 5, 5))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(button_AddPedido)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(button_FecharCompra))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(im_Sushi)
+                                            .addComponent(label_Descricao))
+                                        .addGap(17, 17, 17)))))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(button_Inicio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(button_Cardapio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(label_Sushi)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(button_FazerLogin)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(button_Contato)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -146,17 +168,17 @@ public class FazerPedidosSushi extends javax.swing.JFrame {
                     .addComponent(button_Contato))
                 .addGap(26, 26, 26)
                 .addComponent(label_Sushi)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(im_Sushi)
-                .addGap(18, 18, 18)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_Qtd)
                     .addComponent(label_Preco)
-                    .addComponent(preco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(spinner_Contador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_Preco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(label_Descricao)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(button_AddPedido)
                     .addComponent(button_FecharCompra))
@@ -165,6 +187,27 @@ public class FazerPedidosSushi extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void button_InicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_InicioActionPerformed
+        new ComidaEmCasaAPP().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_InicioActionPerformed
+
+    private void button_CardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_CardapioActionPerformed
+        new Pratos().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_CardapioActionPerformed
+
+    private void button_ContatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_ContatoActionPerformed
+        new Contato().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_ContatoActionPerformed
+
+    private void spStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spStateChanged
+        mult = (int) sp.getValue();
+        preco = mult*precoi;
+        text_Preco.setText(preco+"");       // TODO add your handling code here:
+    }//GEN-LAST:event_spStateChanged
 
     /**
      * @param args the command line arguments
@@ -213,7 +256,7 @@ public class FazerPedidosSushi extends javax.swing.JFrame {
     private javax.swing.JLabel label_Preco;
     private javax.swing.JLabel label_Qtd;
     private javax.swing.JLabel label_Sushi;
-    private javax.swing.JTextField preco;
-    private javax.swing.JSpinner spinner_Contador;
+    private javax.swing.JSpinner sp;
+    private javax.swing.JTextField text_Preco;
     // End of variables declaration//GEN-END:variables
 }

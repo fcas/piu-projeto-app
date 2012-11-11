@@ -5,6 +5,7 @@
 package piu;
 
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 /**
  *
@@ -36,31 +37,101 @@ public class Pratos extends javax.swing.JFrame {
      */
         
         public void clicFeijoada(){
-            p1.setIcon(imagemfeijoada);
-            p2.setIcon(null);
-            p3.setIcon(null);
-            p4.setIcon(null);
+            if(p1.getIcon() == null){
+                p1.setIcon(imagemfeijoada);
+            }
+            else{
+                if(p2.getIcon() == null){
+                    p2.setIcon(imagemfeijoada);
+                }
+                else{
+                    if(p3.getIcon() == null){
+                        p3.setIcon(imagemfeijoada);
+                    }
+                    else{
+                        if(p4.getIcon() == null){
+                            p4.setIcon(imagemfeijoada);
+                        }
+                    }
+                }
+            }
+            
         }
         
         public void clicsushi(){
-            p1.setIcon(imagemsushi);
+            if(p1.getIcon() == null){
+                p1.setIcon(imagemsushi);
+            }
+            else{
+                if(p2.getIcon() == null){
+                    p2.setIcon(imagemsushi);
+                }
+                else{
+                    if(p3.getIcon() == null){
+                        p3.setIcon(imagemsushi);
+                    }
+                    else{
+                        if(p4.getIcon() == null){
+                            p4.setIcon(imagemsushi);
+                        }
+                    }
+                }
+            }
+            /*p1.setIcon(imagemsushi);
             p2.setIcon(null);
             p3.setIcon(null);
-            p4.setIcon(null);
+            p4.setIcon(null);*/
         }
         
         public void clicitaliano(){
-            p1.setIcon(imagemitaliano);
+            
+            if(p1.getIcon() == null){
+                p1.setIcon(imagemitaliano);
+            }
+            else{
+                if(p2.getIcon() == null){
+                    p2.setIcon(imagemitaliano);
+                }
+                else{
+                    if(p3.getIcon() == null){
+                        p3.setIcon(imagemitaliano);
+                    }
+                    else{
+                        if(p4.getIcon() == null){
+                            p4.setIcon(imagemitaliano);
+                        }
+                    }
+                }
+            }
+            /*p1.setIcon(imagemitaliano);
             p2.setIcon(null);
             p3.setIcon(null);
-            p4.setIcon(null);
+            p4.setIcon(null);*/
         }
         
         public void clicyakisoba(){
-            p1.setIcon(imagemyakisoba);
+            if(p1.getIcon() == null){
+                p1.setIcon(imagemyakisoba);
+            }
+            else{
+                if(p2.getIcon() == null){
+                    p2.setIcon(imagemyakisoba);
+                }
+                else{
+                    if(p3.getIcon() == null){
+                        p3.setIcon(imagemyakisoba);
+                    }
+                    else{
+                        if(p4.getIcon() == null){
+                            p4.setIcon(imagemyakisoba);
+                        }
+                    }
+                }
+            }
+            /*p1.setIcon(imagemyakisoba);
             p2.setIcon(null);
             p3.setIcon(null);
-            p4.setIcon(null);
+            p4.setIcon(null);*/
         }
         
         public void clicnada(){
@@ -68,6 +139,50 @@ public class Pratos extends javax.swing.JFrame {
             p2.setIcon(imagemsushi);
             p3.setIcon(imagemyakisoba);
             p4.setIcon(imagemitaliano);
+        }
+        
+        public void clique(){
+            p1.setIcon(null);
+            p2.setIcon(null);
+            p3.setIcon(null);
+            p4.setIcon(null);
+            if (cb1.isSelected()){
+                clicFeijoada();
+            }
+            if(cb2.isSelected()){
+                clicsushi();
+            }
+            if (cb3.isSelected()){
+                clicitaliano();
+            }
+            if(cb4.isSelected()){
+                clicyakisoba();
+            }
+            if(!cb1.isSelected()&&!cb2.isSelected()&&!cb3.isSelected()&&!cb4.isSelected()){
+                clicnada();
+            }
+        }
+        
+        public void prato(JLabel prato){
+            if (prato.getIcon() ==imagemfeijoada){
+                new FazerPedidosFeijoada().setVisible(true);
+                this.dispose();
+            }
+            if (prato.getIcon() ==imagemyakisoba){
+                new FazerPedidosYakisoba().setVisible(true);
+                this.dispose();
+                
+            }
+            if (prato.getIcon() ==imagemitaliano){
+                new FazerPedidosMacarrao().setVisible(true);
+                this.dispose();
+                
+            }
+            if (prato.getIcon() ==imagemsushi){
+                new FazerPedidosSushi().setVisible(true);
+                this.dispose();
+                
+            }
         }
         
         
@@ -88,44 +203,107 @@ public class Pratos extends javax.swing.JFrame {
         p2 = new javax.swing.JLabel();
         p3 = new javax.swing.JLabel();
         p4 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
+        cb3 = new javax.swing.JCheckBox();
+        cb2 = new javax.swing.JCheckBox();
+        cb4 = new javax.swing.JCheckBox();
+        cb1 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Pratos");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
 
         button_Contato.setText("Contato");
+        button_Contato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_ContatoActionPerformed(evt);
+            }
+        });
 
         button_FazerLogin.setText("Fazer Login");
 
         button_Inicio.setText("Inicio");
+        button_Inicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_InicioActionPerformed(evt);
+            }
+        });
 
         button_Cardapio.setText("Cardápio");
+        button_Cardapio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_CardapioActionPerformed(evt);
+            }
+        });
 
-        p1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\feijoadapeq.jpg")); // NOI18N
         p1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        p1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                p1MouseClicked(evt);
+            }
+        });
 
-        p2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\yakisobapeq.jpg")); // NOI18N
         p2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        p2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                p2MouseClicked(evt);
+            }
+        });
 
         p3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\sushipeq.jpg")); // NOI18N
         p3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        p3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                p3MouseClicked(evt);
+            }
+        });
 
-        p4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\italiianopeq.jpg")); // NOI18N
+        p4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\italianopeq.jpg")); // NOI18N
         p4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        p4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                p4MouseClicked(evt);
+            }
+        });
 
-        jCheckBox1.setText("Culinária Italiana");
+        cb3.setText("Culinária Italiana");
+        cb3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb3ActionPerformed(evt);
+            }
+        });
 
-        jCheckBox2.setText("Culinária Chinesa");
+        cb2.setText("Culinária Chinesa");
+        cb2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb2ActionPerformed(evt);
+            }
+        });
 
-        jCheckBox3.setText("Culinária Japonesa");
+        cb4.setText("Culinária Japonesa");
+        cb4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb4ActionPerformed(evt);
+            }
+        });
 
-        jCheckBox4.setText("Culinária Brasileira");
+        cb1.setText("Culinária Brasileira");
+        cb1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cb1MouseClicked(evt);
+            }
+        });
+        cb1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -144,25 +322,25 @@ public class Pratos extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(121, 121, 121)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox1)
-                            .addComponent(jCheckBox2)
-                            .addComponent(jCheckBox3)
-                            .addComponent(jCheckBox4))
+                            .addComponent(cb3)
+                            .addComponent(cb2)
+                            .addComponent(cb4)
+                            .addComponent(cb1))
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(p3)
-                                .addGap(18, 18, 18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(p4))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(p1)
                                 .addGap(18, 18, 18)
-                                .addComponent(p2)))))
+                                .addComponent(p2))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(121, 121, 121)
+                        .addComponent(jLabel1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -179,27 +357,84 @@ public class Pratos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(p1)
-                            .addComponent(p2))
-                        .addGap(20, 20, 20)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(p3)
-                            .addComponent(p4)))
+                            .addComponent(p2)
+                            .addComponent(p1))
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(p3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(p4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(11, 11, 11)
-                        .addComponent(jCheckBox4)
+                        .addComponent(cb1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBox2)
+                        .addComponent(cb2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBox1)
+                        .addComponent(cb3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox3)))
+                        .addComponent(cb4)))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void button_InicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_InicioActionPerformed
+        new ComidaEmCasaAPP().setVisible(true);
+        this.dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button_InicioActionPerformed
+
+    private void button_CardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_CardapioActionPerformed
+        new Pratos().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_CardapioActionPerformed
+
+    private void button_ContatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_ContatoActionPerformed
+        new Contato().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_ContatoActionPerformed
+
+    private void cb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb1ActionPerformed
+        clique(); 
+        //System.out.println("rodando");// TODO add your handling code here:
+    }//GEN-LAST:event_cb1ActionPerformed
+
+    private void cb2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb2ActionPerformed
+        clique();        // TODO add your handling code here:
+    }//GEN-LAST:event_cb2ActionPerformed
+
+    private void cb3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb3ActionPerformed
+        clique();        // TODO add your handling code here:
+    }//GEN-LAST:event_cb3ActionPerformed
+
+    private void cb4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb4ActionPerformed
+        clique();        // TODO add your handling code here:
+    }//GEN-LAST:event_cb4ActionPerformed
+
+    private void cb1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cb1MouseClicked
+        clique();        // TODO add your handling code here:
+    }//GEN-LAST:event_cb1MouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+                // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void p1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p1MouseClicked
+        prato(p1);// TODO add your handling code here:
+    }//GEN-LAST:event_p1MouseClicked
+
+    private void p2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p2MouseClicked
+        prato(p2);        // TODO add your handling code here:
+    }//GEN-LAST:event_p2MouseClicked
+
+    private void p3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p3MouseClicked
+        prato(p3);        // TODO add your handling code here:
+    }//GEN-LAST:event_p3MouseClicked
+
+    private void p4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p4MouseClicked
+        prato(p4);        // TODO add your handling code here:
+    }//GEN-LAST:event_p4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -241,10 +476,10 @@ public class Pratos extends javax.swing.JFrame {
     private javax.swing.JButton button_Contato;
     private javax.swing.JButton button_FazerLogin;
     private javax.swing.JButton button_Inicio;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JCheckBox cb1;
+    private javax.swing.JCheckBox cb2;
+    private javax.swing.JCheckBox cb3;
+    private javax.swing.JCheckBox cb4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel p1;
     private javax.swing.JLabel p2;

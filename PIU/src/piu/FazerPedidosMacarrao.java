@@ -4,6 +4,8 @@
  */
 package piu;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Dalay
@@ -15,7 +17,15 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
      */
     public FazerPedidosMacarrao() {
         initComponents();
+        im.setIcon(imagem);
+        text_Preco.setEditable(false);
+        text_Preco.setText(preco+"");
+        text_Preco.setText(preco*mult+"");
     }
+        float preco = (float) 49.99;
+        float precoi = (float) 49.99;
+        int mult = 0;
+        ImageIcon imagem = new ImageIcon("src/Imagens/italiano.jpg");
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -32,7 +42,7 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
         button_FazerLogin = new javax.swing.JButton();
         button_Cardapio = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        im = new javax.swing.JLabel();
         label_Descricao3 = new javax.swing.JLabel();
         label_Descricao = new javax.swing.JLabel();
         label_Descricao2 = new javax.swing.JLabel();
@@ -40,7 +50,7 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
         button_AddPedido = new javax.swing.JButton();
         label_Preco = new javax.swing.JLabel();
         text_Preco = new javax.swing.JTextField();
-        spinner_Contador = new javax.swing.JSpinner();
+        sp = new javax.swing.JSpinner();
         label_Qtd = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,17 +59,32 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
         label_FazerPedidos.setText("Fazer Pedidos");
 
         button_Inicio.setText("Inicio");
+        button_Inicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_InicioActionPerformed(evt);
+            }
+        });
 
         button_Contato.setText("Contato");
+        button_Contato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_ContatoActionPerformed(evt);
+            }
+        });
 
         button_FazerLogin.setText("Fazer Login");
 
         button_Cardapio.setText("Cardápio");
+        button_Cardapio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_CardapioActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Macarrão");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\italiano.jpg")); // NOI18N
+        im.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\italiano.jpg")); // NOI18N
 
         label_Descricao3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_Descricao3.setText("verde e molho à moda da casa ");
@@ -77,6 +102,12 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
         button_AddPedido.setText("Add Pedido");
 
         label_Preco.setText("Preço:");
+
+        sp.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                spStateChanged(evt);
+            }
+        });
 
         label_Qtd.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_Qtd.setText("Qtd.:");
@@ -107,7 +138,7 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(59, 59, 59)
-                        .addComponent(jLabel2))
+                        .addComponent(im))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(50, 50, 50)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,7 +158,7 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
                                 .addGap(14, 14, 14)
                                 .addComponent(label_Qtd)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(spinner_Contador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(sp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(47, 47, 47)
                                 .addComponent(label_Preco)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -148,13 +179,13 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
+                .addComponent(im)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_Qtd)
                     .addComponent(label_Preco)
                     .addComponent(text_Preco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(spinner_Contador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(sp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(label_Descricao)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -170,6 +201,27 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void button_InicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_InicioActionPerformed
+        new ComidaEmCasaAPP().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_InicioActionPerformed
+
+    private void button_CardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_CardapioActionPerformed
+        new Pratos().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_CardapioActionPerformed
+
+    private void button_ContatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_ContatoActionPerformed
+        new Contato().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_ContatoActionPerformed
+
+    private void spStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spStateChanged
+        mult = (int) sp.getValue();
+        preco = mult*precoi;
+        text_Preco.setText(preco+"");        // TODO add your handling code here:
+    }//GEN-LAST:event_spStateChanged
 
     /**
      * @param args the command line arguments
@@ -212,15 +264,15 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
     private javax.swing.JButton button_FazerLogin;
     private javax.swing.JButton button_FecharCompra;
     private javax.swing.JButton button_Inicio;
+    private javax.swing.JLabel im;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel label_Descricao;
     private javax.swing.JLabel label_Descricao2;
     private javax.swing.JLabel label_Descricao3;
     private javax.swing.JLabel label_FazerPedidos;
     private javax.swing.JLabel label_Preco;
     private javax.swing.JLabel label_Qtd;
-    private javax.swing.JSpinner spinner_Contador;
+    private javax.swing.JSpinner sp;
     private javax.swing.JTextField text_Preco;
     // End of variables declaration//GEN-END:variables
 }

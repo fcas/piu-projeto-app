@@ -90,11 +90,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Contato"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_ContatoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="button_Inicio">
       <Properties>
         <Property name="text" type="java.lang.String" value="Inicio"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_InicioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="button_FazerLogin">
       <Properties>
@@ -105,6 +111,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Card&#xe1;pio"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_CardapioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>

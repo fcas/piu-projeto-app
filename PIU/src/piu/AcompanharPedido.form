@@ -124,6 +124,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Card&#xe1;pio"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_CardapioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="button_FazerLogout">
       <Properties>
@@ -134,6 +137,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Contato"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_ContatoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
@@ -175,11 +181,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="mapa">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="/home/felipe/NetBeansProjects/piu-projeto/trunk/trunk/PIU/src/imagens/mapa.png"/>
-        </Property>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>
