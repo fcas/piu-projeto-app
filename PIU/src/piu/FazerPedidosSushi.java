@@ -83,8 +83,6 @@ public class FazerPedidosSushi extends javax.swing.JFrame {
         label_Sushi.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_Sushi.setText("Sushi");
 
-        im_Sushi.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\sushi.jpg")); // NOI18N
-
         label_Qtd.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_Qtd.setText("Qtd.:");
 
@@ -120,17 +118,9 @@ public class FazerPedidosSushi extends javax.swing.JFrame {
                                 .addGap(47, 47, 47)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(127, 127, 127)
-                                                .addComponent(label_Preco)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(text_Preco, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(label_Qtd)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(sp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(5, 5, 5))
+                                        .addComponent(label_Qtd)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(sp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addComponent(button_AddPedido)
                                         .addGap(18, 18, 18)
@@ -139,7 +129,12 @@ public class FazerPedidosSushi extends javax.swing.JFrame {
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(im_Sushi)
                                             .addComponent(label_Descricao))
-                                        .addGap(17, 17, 17)))))
+                                        .addGap(17, 17, 17))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(127, 127, 127)
+                                        .addComponent(label_Preco)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(text_Preco, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -178,7 +173,7 @@ public class FazerPedidosSushi extends javax.swing.JFrame {
                     .addComponent(sp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(label_Descricao)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(button_AddPedido)
                     .addComponent(button_FecharCompra))
