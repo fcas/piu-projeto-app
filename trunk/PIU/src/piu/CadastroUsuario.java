@@ -8,7 +8,9 @@ package piu;
  *
  * @author Dalay
  */
+
 public class CadastroUsuario extends javax.swing.JFrame {
+ 
 
     /**
      * Creates new form CadastroUsuario
@@ -28,32 +30,32 @@ public class CadastroUsuario extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
+        telefone = new javax.swing.JTextPane();
         jLabel1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jTextPane8 = new javax.swing.JTextPane();
+        usuario = new javax.swing.JTextPane();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextPane3 = new javax.swing.JTextPane();
+        endereco = new javax.swing.JTextPane();
         jLabel5 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextPane5 = new javax.swing.JTextPane();
+        cep = new javax.swing.JTextPane();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        nome = new javax.swing.JTextPane();
         jButton1 = new javax.swing.JButton();
-        passwordfield_SenhaCliente = new javax.swing.JPasswordField();
+        senha = new javax.swing.JPasswordField();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jScrollPane2.setViewportView(jTextPane2);
+        jScrollPane2.setViewportView(telefone);
 
         jLabel1.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         jLabel1.setText("Cadastrar-se");
@@ -66,19 +68,19 @@ public class CadastroUsuario extends javax.swing.JFrame {
 
         jLabel10.setText("Senha");
 
-        jScrollPane8.setViewportView(jTextPane8);
+        jScrollPane8.setViewportView(usuario);
 
-        jScrollPane3.setViewportView(jTextPane3);
+        jScrollPane3.setViewportView(endereco);
 
         jLabel5.setText("CEP:");
 
         jLabel9.setText("Usuário");
 
-        jScrollPane5.setViewportView(jTextPane5);
+        jScrollPane5.setViewportView(cep);
 
         jLabel2.setText("Nome");
 
-        jScrollPane1.setViewportView(jTextPane1);
+        jScrollPane1.setViewportView(nome);
 
         jButton1.setText("Finalizar Cadastro");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +117,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel10)
-                                    .addComponent(passwordfield_SenhaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(senha, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel4)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -185,7 +187,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(passwordfield_SenhaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
                 .addContainerGap(29, Short.MAX_VALUE))
@@ -202,6 +204,8 @@ public class CadastroUsuario extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+   
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -235,6 +239,8 @@ public class CadastroUsuario extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JTextPane cep;
+    private javax.swing.JTextPane endereco;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -252,11 +258,9 @@ public class CadastroUsuario extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JTextPane jTextPane2;
-    private javax.swing.JTextPane jTextPane3;
-    private javax.swing.JTextPane jTextPane5;
-    private javax.swing.JTextPane jTextPane8;
-    private javax.swing.JPasswordField passwordfield_SenhaCliente;
+    private javax.swing.JTextPane nome;
+    private javax.swing.JPasswordField senha;
+    private javax.swing.JTextPane telefone;
+    private javax.swing.JTextPane usuario;
     // End of variables declaration//GEN-END:variables
 }

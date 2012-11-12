@@ -94,8 +94,6 @@ public class FazerPedidosYakisoba extends javax.swing.JFrame {
         yakisoba.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         yakisoba.setText("Yakisoba");
 
-        im.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\yakisoba.jpg")); // NOI18N
-
         label_Descricao3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_Descricao3.setText("temperados com molho shoyu");
 
@@ -199,11 +197,11 @@ public class FazerPedidosYakisoba extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(yakisoba))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 194, Short.MAX_VALUE)
                         .addComponent(jLabel3)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(im)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_Qtd)
                     .addComponent(label_Preco)
