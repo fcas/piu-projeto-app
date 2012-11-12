@@ -55,6 +55,11 @@ public class FecharCompra extends javax.swing.JFrame {
         });
 
         button_FazerLogin.setText("Fazer Logout");
+        button_FazerLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_FazerLoginActionPerformed(evt);
+            }
+        });
 
         button_Cardapio.setText("Cardápio");
         button_Cardapio.addActionListener(new java.awt.event.ActionListener() {
@@ -66,8 +71,18 @@ public class FecharCompra extends javax.swing.JFrame {
         jLabel2.setText("Forma de pagamento:");
 
         jButton1.setText("Cartão de Crédito");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Em espécie");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -135,6 +150,21 @@ public class FecharCompra extends javax.swing.JFrame {
         this.dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_button_ContatoActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new PagamentoCartaoCredito().setVisible(true);
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        new PagamentoEmEspecie().setVisible(true);
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void button_FazerLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_FazerLoginActionPerformed
+        new ComidaEmCasaAPP().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_FazerLoginActionPerformed
 
     /**
      * @param args the command line arguments

@@ -19,7 +19,7 @@ public class AlterarStatusDosPedidos_Pedidos extends javax.swing.JFrame {
     public AlterarStatusDosPedidos_Pedidos() {
         initComponents();
     }
-    DefaultTableModel tabTipo = new DefaultTableModel(null, new String[] {"canal", "tipo"}){   
+    DefaultTableModel tabTipo = new DefaultTableModel(null, new String[] {"pedidos"}){   
     public boolean isCellEditable(int rowIndex, int mColIndex){   
          return false;   
     }   
@@ -47,6 +47,11 @@ public class AlterarStatusDosPedidos_Pedidos extends javax.swing.JFrame {
         jLabel1.setText("Alterar Status Dos Pedidos");
 
         jButton1.setText("Pedidos");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jTable1.setModel(tabTipo);
         jScrollPane1.setViewportView(jTable1);
@@ -59,12 +64,10 @@ public class AlterarStatusDosPedidos_Pedidos extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addContainerGap()
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(94, 94, 94)
@@ -90,6 +93,11 @@ public class AlterarStatusDosPedidos_Pedidos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new Pedidos().setVisible(true);
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

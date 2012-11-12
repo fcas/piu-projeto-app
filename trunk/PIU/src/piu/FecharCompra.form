@@ -106,6 +106,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Fazer Logout"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_FazerLoginActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="button_Cardapio">
       <Properties>
@@ -124,11 +127,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Cart&#xe3;o de Cr&#xe9;dito"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
         <Property name="text" type="java.lang.String" value="Em esp&#xe9;cie"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -198,6 +198,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Fazer Login"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_FazerLoginActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="button_Cardapio">
       <Properties>
@@ -346,6 +349,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Finalizar Cadastro"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

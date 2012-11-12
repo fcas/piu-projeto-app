@@ -11,15 +11,15 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Dalay
  */
-public class AlterarStatusDosPedidos_PedidosEPratos2 extends javax.swing.JFrame {
+public class AlterarStatusDosPratos_PedidosEPratos2 extends javax.swing.JFrame {
 
     /**
      * Creates new form AlterarStatusDosPedidos_PedidosEPratos2
      */
-    public AlterarStatusDosPedidos_PedidosEPratos2() {
+    public AlterarStatusDosPratos_PedidosEPratos2() {
         initComponents();
     }
-    DefaultTableModel tabTipo = new DefaultTableModel(null, new String[] {"canal", "tipo"}){   
+    DefaultTableModel tabTipo = new DefaultTableModel(null, new String[] {"pratos"}){   
     public boolean isCellEditable(int rowIndex, int mColIndex){   
          return false;   
     }   
@@ -49,9 +49,14 @@ public class AlterarStatusDosPedidos_PedidosEPratos2 extends javax.swing.JFrame 
         jScrollPane1.setViewportView(jTable1);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText("Alterar Status Dos Pedidos");
+        jLabel1.setText("Alterar Status Dos Pratos");
 
         jButton1.setText("Pedidos");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -59,12 +64,10 @@ public class AlterarStatusDosPedidos_PedidosEPratos2 extends javax.swing.JFrame 
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addContainerGap()
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(94, 94, 94)
@@ -72,7 +75,7 @@ public class AlterarStatusDosPedidos_PedidosEPratos2 extends javax.swing.JFrame 
                     .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addComponent(jButton2)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,6 +94,11 @@ public class AlterarStatusDosPedidos_PedidosEPratos2 extends javax.swing.JFrame 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new Pedidos().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -108,20 +116,20 @@ public class AlterarStatusDosPedidos_PedidosEPratos2 extends javax.swing.JFrame 
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AlterarStatusDosPedidos_PedidosEPratos2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlterarStatusDosPratos_PedidosEPratos2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AlterarStatusDosPedidos_PedidosEPratos2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlterarStatusDosPratos_PedidosEPratos2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AlterarStatusDosPedidos_PedidosEPratos2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlterarStatusDosPratos_PedidosEPratos2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AlterarStatusDosPedidos_PedidosEPratos2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlterarStatusDosPratos_PedidosEPratos2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AlterarStatusDosPedidos_PedidosEPratos2().setVisible(true);
+                new AlterarStatusDosPratos_PedidosEPratos2().setVisible(true);
             }
         });
     }

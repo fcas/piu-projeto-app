@@ -36,6 +36,11 @@ public class Pedidos extends javax.swing.JFrame {
         jLabel1.setText("Pedidos");
 
         jButton1.setText("Alterar Status dos Pedidos");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\I.jpg")); // NOI18N
 
@@ -71,6 +76,11 @@ public class Pedidos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new AlterarStatusDosPedidos_Pedidos().setVisible(true);
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

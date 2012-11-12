@@ -53,6 +53,11 @@ public class CancelarPedido extends javax.swing.JFrame {
         });
 
         button_FazerLogout.setText("Fazer Logout");
+        button_FazerLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_FazerLogoutActionPerformed(evt);
+            }
+        });
 
         button_Contato.setText("Contato");
         button_Contato.addActionListener(new java.awt.event.ActionListener() {
@@ -120,6 +125,11 @@ public class CancelarPedido extends javax.swing.JFrame {
         new Contato().setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_button_ContatoActionPerformed
+
+    private void button_FazerLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_FazerLogoutActionPerformed
+        new ComidaEmCasaAPP().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_FazerLogoutActionPerformed
 
     /**
      * @param args the command line arguments

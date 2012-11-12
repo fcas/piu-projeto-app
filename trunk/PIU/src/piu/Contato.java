@@ -46,6 +46,11 @@ public class Contato extends javax.swing.JFrame {
         label_Contato.setText("Contato");
 
         button_FazerLogin.setText("Fazer Login");
+        button_FazerLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_FazerLoginActionPerformed(evt);
+            }
+        });
 
         button_Cardapio.setText("Cardápio");
         button_Cardapio.addActionListener(new java.awt.event.ActionListener() {
@@ -143,6 +148,11 @@ public class Contato extends javax.swing.JFrame {
         new Contato().setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_button_ContatoActionPerformed
+
+    private void button_FazerLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_FazerLoginActionPerformed
+        new FazerLogin().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_FazerLoginActionPerformed
 
     /**
      * @param args the command line arguments
