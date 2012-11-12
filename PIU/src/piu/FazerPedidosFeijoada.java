@@ -4,6 +4,8 @@
  */
 package piu;
 
+import classes.Informacoes;
+import classes.Pedido;
 import javax.swing.ImageIcon;
 
 /**
@@ -239,6 +241,12 @@ public class FazerPedidosFeijoada extends javax.swing.JFrame {
     }//GEN-LAST:event_spStateChanged
 
     private void button_AddPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_AddPedidoActionPerformed
+        Pedido p = new Pedido();
+        p.quant = mult;
+        p.valor = preco*mult;
+        p.prato = label_Feijoada.getText();
+        Informacoes.pedidos.add(p);
+        
         new PedidoAdicionado().setVisible(true);
         this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_button_AddPedidoActionPerformed

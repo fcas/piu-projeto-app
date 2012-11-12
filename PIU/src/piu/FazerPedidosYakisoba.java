@@ -4,6 +4,8 @@
  */
 package piu;
 
+import classes.Informacoes;
+import classes.Pedido;
 import javax.swing.ImageIcon;
 
 /**
@@ -43,7 +45,7 @@ public class FazerPedidosYakisoba extends javax.swing.JFrame {
         button_Contato = new javax.swing.JButton();
         label_FazerPedidos = new javax.swing.JLabel();
         button_Inicio = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        yakisoba = new javax.swing.JLabel();
         im = new javax.swing.JLabel();
         label_Descricao3 = new javax.swing.JLabel();
         label_Descricao = new javax.swing.JLabel();
@@ -89,8 +91,8 @@ public class FazerPedidosYakisoba extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel1.setText("Yakisoba");
+        yakisoba.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        yakisoba.setText("Yakisoba");
 
         im.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dalay\\Documents\\NetBeansProjects\\PIU\\src\\Imagens\\yakisoba.jpg")); // NOI18N
 
@@ -175,7 +177,7 @@ public class FazerPedidosYakisoba extends javax.swing.JFrame {
                         .addGap(129, 129, 129)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
-                            .addComponent(jLabel1)))
+                            .addComponent(yakisoba)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(51, 51, 51)
                         .addComponent(im)))
@@ -195,7 +197,7 @@ public class FazerPedidosYakisoba extends javax.swing.JFrame {
                             .addComponent(button_FazerLogin)
                             .addComponent(button_Contato))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel1))
+                        .addComponent(yakisoba))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel3)))
@@ -245,6 +247,13 @@ public class FazerPedidosYakisoba extends javax.swing.JFrame {
     }//GEN-LAST:event_spStateChanged
 
     private void button_AddPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_AddPedidoActionPerformed
+        Pedido p = new Pedido();
+        p.quant = mult;
+        p.valor = preco*mult;
+        p.prato = yakisoba.getText();
+        Informacoes.pedidos.add(p);
+        
+        
         new PedidoAdicionado().setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_button_AddPedidoActionPerformed
@@ -301,7 +310,6 @@ public class FazerPedidosYakisoba extends javax.swing.JFrame {
     private javax.swing.JButton button_FecharCompra;
     private javax.swing.JButton button_Inicio;
     private javax.swing.JLabel im;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel label_Descricao;
     private javax.swing.JLabel label_Descricao2;
@@ -311,5 +319,6 @@ public class FazerPedidosYakisoba extends javax.swing.JFrame {
     private javax.swing.JLabel label_Qtd;
     private javax.swing.JSpinner sp;
     private javax.swing.JTextField text_Preco;
+    private javax.swing.JLabel yakisoba;
     // End of variables declaration//GEN-END:variables
 }

@@ -75,6 +75,11 @@ public class GerenciarRestaurante extends javax.swing.JFrame {
 
         jButton5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton5.setText("Cardápio");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton6.setText("Formas de Pagamento");
@@ -195,6 +200,11 @@ public class GerenciarRestaurante extends javax.swing.JFrame {
         new CadastroUsuario().setVisible(true);
         this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        new Cardapio().setVisible(true);
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
