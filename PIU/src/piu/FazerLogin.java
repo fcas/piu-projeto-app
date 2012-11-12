@@ -67,6 +67,11 @@ public class FazerLogin extends javax.swing.JFrame {
         });
 
         button_FazerLogin.setText("Fazer Login");
+        button_FazerLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_FazerLoginActionPerformed(evt);
+            }
+        });
 
         button_Contato.setText("Contato");
         button_Contato.addActionListener(new java.awt.event.ActionListener() {
@@ -93,6 +98,11 @@ public class FazerLogin extends javax.swing.JFrame {
 
         button_CadastrarCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         button_CadastrarCliente.setText("Cadastrar-se");
+        button_CadastrarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_CadastrarClienteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -194,6 +204,17 @@ public class FazerLogin extends javax.swing.JFrame {
         new Contato().setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_button_ContatoActionPerformed
+
+    private void button_FazerLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_FazerLoginActionPerformed
+        new FazerLogin().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_FazerLoginActionPerformed
+
+    private void button_CadastrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_CadastrarClienteActionPerformed
+        new CadastroCliente().setVisible(true);
+        this.dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button_CadastrarClienteActionPerformed
 
     /**
      * @param args the command line arguments

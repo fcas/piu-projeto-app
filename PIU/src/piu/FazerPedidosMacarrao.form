@@ -151,6 +151,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Fazer Login"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_FazerLoginActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="button_Cardapio">
       <Properties>
@@ -201,6 +204,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Fechar Compra"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_FecharCompraActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="button_AddPedido">
       <Properties>
@@ -209,6 +215,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Add Pedido"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_AddPedidoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="label_Preco">
       <Properties>

@@ -103,6 +103,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Fazer Logout"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_FazerLogoutActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="button_Contato">
       <Properties>
@@ -131,21 +134,33 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Finalizar Fechar Compra"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_FinalizarCompraActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="button_EscolherOutroPrato">
       <Properties>
         <Property name="text" type="java.lang.String" value="Escolher outro prato"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_EscolherOutroPratoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="button_AcompanharPedido">
       <Properties>
         <Property name="text" type="java.lang.String" value="Acompanhar pedido"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_AcompanharPedidoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="button_PedidoRealizados">
       <Properties>
         <Property name="text" type="java.lang.String" value="Pedidos realizados"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_PedidoRealizadosActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -55,6 +55,11 @@ public class BemVindoCliente extends javax.swing.JFrame {
         });
 
         button_FazerLogout.setText("Fazer Logout");
+        button_FazerLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_FazerLogoutActionPerformed(evt);
+            }
+        });
 
         button_Contato.setText("Contato");
         button_Contato.addActionListener(new java.awt.event.ActionListener() {
@@ -69,12 +74,32 @@ public class BemVindoCliente extends javax.swing.JFrame {
         label_Cliente.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
 
         button_FinalizarCompra.setText("Finalizar Fechar Compra");
+        button_FinalizarCompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_FinalizarCompraActionPerformed(evt);
+            }
+        });
 
         button_EscolherOutroPrato.setText("Escolher outro prato");
+        button_EscolherOutroPrato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_EscolherOutroPratoActionPerformed(evt);
+            }
+        });
 
         button_AcompanharPedido.setText("Acompanhar pedido");
+        button_AcompanharPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_AcompanharPedidoActionPerformed(evt);
+            }
+        });
 
         button_PedidoRealizados.setText("Pedidos realizados");
+        button_PedidoRealizados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_PedidoRealizadosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -145,6 +170,31 @@ public class BemVindoCliente extends javax.swing.JFrame {
         new Contato().setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_button_ContatoActionPerformed
+
+    private void button_FinalizarCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_FinalizarCompraActionPerformed
+        new FecharCompra2().setVisible(true);
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_button_FinalizarCompraActionPerformed
+
+    private void button_EscolherOutroPratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_EscolherOutroPratoActionPerformed
+        new Pratos().setVisible(true);
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_button_EscolherOutroPratoActionPerformed
+
+    private void button_AcompanharPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_AcompanharPedidoActionPerformed
+        new AcompanharPedidoTR().setVisible(true);
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_button_AcompanharPedidoActionPerformed
+
+    private void button_PedidoRealizadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_PedidoRealizadosActionPerformed
+        new PedidosRealizados().setVisible(true);
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_button_PedidoRealizadosActionPerformed
+
+    private void button_FazerLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_FazerLogoutActionPerformed
+        new ComidaEmCasaAPP().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_FazerLogoutActionPerformed
 
     /**
      * @param args the command line arguments

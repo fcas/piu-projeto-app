@@ -74,6 +74,11 @@ public class CadastroCliente extends javax.swing.JFrame {
         });
 
         button_FazerLogin.setText("Fazer Login");
+        button_FazerLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_FazerLoginActionPerformed(evt);
+            }
+        });
 
         button_Cardapio.setText("Cardápio");
         button_Cardapio.addActionListener(new java.awt.event.ActionListener() {
@@ -124,6 +129,11 @@ public class CadastroCliente extends javax.swing.JFrame {
         passwordfield_SenhaCliente.setText("jPasswordField1");
 
         jButton1.setText("Finalizar Cadastro");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -256,6 +266,16 @@ public class CadastroCliente extends javax.swing.JFrame {
         new Contato().setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_button_ContatoActionPerformed
+
+    private void button_FazerLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_FazerLoginActionPerformed
+        new FazerLogin().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_FazerLoginActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new FazerLogin().setVisible(true);
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

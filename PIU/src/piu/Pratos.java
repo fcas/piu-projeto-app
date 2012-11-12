@@ -227,6 +227,11 @@ public class Pratos extends javax.swing.JFrame {
         });
 
         button_FazerLogin.setText("Fazer Login");
+        button_FazerLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_FazerLoginActionPerformed(evt);
+            }
+        });
 
         button_Inicio.setText("Inicio");
         button_Inicio.addActionListener(new java.awt.event.ActionListener() {
@@ -435,6 +440,11 @@ public class Pratos extends javax.swing.JFrame {
     private void p4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p4MouseClicked
         prato(p4);        // TODO add your handling code here:
     }//GEN-LAST:event_p4MouseClicked
+
+    private void button_FazerLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_FazerLoginActionPerformed
+        new FazerLogin().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_FazerLoginActionPerformed
 
     /**
      * @param args the command line arguments

@@ -4,6 +4,8 @@
  */
 package piu;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author felipe
@@ -15,7 +17,13 @@ public class PedidosRealizados extends javax.swing.JFrame {
      */
     public PedidosRealizados() {
         initComponents();
+        
     }
+    DefaultTableModel tipo = new DefaultTableModel(null, new String[] {"pedidos"}){   
+    public boolean isCellEditable(int rowIndex, int mColIndex){   
+         return false;   
+    }   
+};
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,22 +34,15 @@ public class PedidosRealizados extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
         jLabel1 = new javax.swing.JLabel();
         button_Contato = new javax.swing.JButton();
         button_Cardapio = new javax.swing.JButton();
         button_FazerLogin = new javax.swing.JButton();
         button_Inicio = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane2.setViewportView(jList1);
 
         jLabel1.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         jLabel1.setText("Pedidos Realizados");
@@ -61,6 +62,11 @@ public class PedidosRealizados extends javax.swing.JFrame {
         });
 
         button_FazerLogin.setText("Fazer Logout");
+        button_FazerLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_FazerLoginActionPerformed(evt);
+            }
+        });
 
         button_Inicio.setText("Inicio");
         button_Inicio.addActionListener(new java.awt.event.ActionListener() {
@@ -69,13 +75,16 @@ public class PedidosRealizados extends javax.swing.JFrame {
             }
         });
 
+        jTable1.setModel(tipo);
+        jScrollPane1.setViewportView(jTable1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addComponent(jLabel1))
@@ -87,7 +96,7 @@ public class PedidosRealizados extends javax.swing.JFrame {
                         .addComponent(button_FazerLogin)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(button_Contato))
-                    .addComponent(jScrollPane2))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -101,9 +110,9 @@ public class PedidosRealizados extends javax.swing.JFrame {
                     .addComponent(button_Cardapio)
                     .addComponent(button_FazerLogin)
                     .addComponent(button_Contato))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
         );
 
         pack();
@@ -123,6 +132,11 @@ public class PedidosRealizados extends javax.swing.JFrame {
         new Contato().setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_button_ContatoActionPerformed
+
+    private void button_FazerLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_FazerLoginActionPerformed
+        new ComidaEmCasaAPP().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_FazerLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,7 +178,7 @@ public class PedidosRealizados extends javax.swing.JFrame {
     private javax.swing.JButton button_FazerLogin;
     private javax.swing.JButton button_Inicio;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JList jList1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

@@ -73,6 +73,11 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
         });
 
         button_FazerLogin.setText("Fazer Login");
+        button_FazerLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_FazerLoginActionPerformed(evt);
+            }
+        });
 
         button_Cardapio.setText("Cardápio");
         button_Cardapio.addActionListener(new java.awt.event.ActionListener() {
@@ -95,9 +100,19 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
 
         button_FecharCompra.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         button_FecharCompra.setText("Fechar Compra");
+        button_FecharCompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_FecharCompraActionPerformed(evt);
+            }
+        });
 
         button_AddPedido.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         button_AddPedido.setText("Add Pedido");
+        button_AddPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_AddPedidoActionPerformed(evt);
+            }
+        });
 
         label_Preco.setText("Preço:");
 
@@ -218,6 +233,21 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
         preco = mult*precoi;
         text_Preco.setText(preco+"");        // TODO add your handling code here:
     }//GEN-LAST:event_spStateChanged
+
+    private void button_AddPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_AddPedidoActionPerformed
+        new PedidoAdicionado().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_AddPedidoActionPerformed
+
+    private void button_FazerLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_FazerLoginActionPerformed
+        new FazerLogin().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_FazerLoginActionPerformed
+
+    private void button_FecharCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_FecharCompraActionPerformed
+        new FazerLogin().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_button_FecharCompraActionPerformed
 
     /**
      * @param args the command line arguments

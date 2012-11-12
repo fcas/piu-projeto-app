@@ -63,6 +63,11 @@ public class AcompanharPedido extends javax.swing.JFrame {
         });
 
         button_FazerLogout.setText("Fazer Logout");
+        button_FazerLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_FazerLogoutActionPerformed(evt);
+            }
+        });
 
         button_Contato.setText("Contato");
         button_Contato.addActionListener(new java.awt.event.ActionListener() {
@@ -81,8 +86,18 @@ public class AcompanharPedido extends javax.swing.JFrame {
         jLabel4.setText("Tempo de entrega:");
 
         jButton1.setText("Confirmar pedido");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Cancelar pedido");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -176,6 +191,21 @@ public class AcompanharPedido extends javax.swing.JFrame {
         new Contato().setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_button_ContatoActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        new CancelarPedido().setVisible(true);
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new FecharCompra().setVisible(true);
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void button_FazerLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_FazerLogoutActionPerformed
+        new ComidaEmCasaAPP().setVisible(true);
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_button_FazerLogoutActionPerformed
 
     /**
      * @param args the command line arguments
