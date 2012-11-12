@@ -4,6 +4,8 @@
  */
 package piu;
 
+import classes.Informacoes;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -17,9 +19,10 @@ public class PedidosRealizados extends javax.swing.JFrame {
      */
     public PedidosRealizados() {
         initComponents();
+        mostrar();
         
     }
-    DefaultTableModel tipo = new DefaultTableModel(null, new String[] {"pedidos"}){   
+    DefaultTableModel tipo = new DefaultTableModel(null, new String[] {"prato", "quantidade", "valor"}){   
     public boolean isCellEditable(int rowIndex, int mColIndex){   
          return false;   
     }   
@@ -141,6 +144,26 @@ public class PedidosRealizados extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    
+    public void mostrar(){
+    while(tipo.getRowCount()>0){  
+        tipo.removeRow(0);  
+    }
+    if (Informacoes.pedidos.isEmpty()){
+                JOptionPane.showMessageDialog(null, "nenhum pedido realizado");
+    }
+    else{
+
+        String[] linha = new String[] {null, null};
+        for(int j = 0; j < Informacoes.pedidos.size(); j++){
+            tipo.addRow(linha);
+            tipo.setValueAt(Informacoes.pedidos.get(j).prato, j, 0);
+            tipo.setValueAt(Informacoes.pedidos.get(j).quant, j, 1);
+            tipo.setValueAt(Informacoes.pedidos.get(j).valor, j, 2);
+            
+        }
+    }
+    }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

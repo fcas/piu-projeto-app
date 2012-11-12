@@ -4,6 +4,8 @@
  */
 package piu;
 
+import classes.Informacoes;
+import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 
@@ -18,8 +20,9 @@ public class AlterarStatusDosPedidos_Pedidos extends javax.swing.JFrame {
      */
     public AlterarStatusDosPedidos_Pedidos() {
         initComponents();
+        mostrar();
     }
-    DefaultTableModel tabTipo = new DefaultTableModel(null, new String[] {"pedidos"}){   
+    DefaultTableModel tabTipo = new DefaultTableModel(null, new String[] {"pedido", "quantidade", "status"}){   
     public boolean isCellEditable(int rowIndex, int mColIndex){   
          return false;   
     }   
@@ -38,7 +41,7 @@ public class AlterarStatusDosPedidos_Pedidos extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        table = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,10 +56,15 @@ public class AlterarStatusDosPedidos_Pedidos extends javax.swing.JFrame {
             }
         });
 
-        jTable1.setModel(tabTipo);
-        jScrollPane1.setViewportView(jTable1);
+        table.setModel(tabTipo);
+        jScrollPane1.setViewportView(table);
 
         jButton2.setText("Alterar Status Para \"Em Entrega\"");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,9 +107,33 @@ public class AlterarStatusDosPedidos_Pedidos extends javax.swing.JFrame {
         this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Informacoes.pedidos.get(table.getSelectedRow()).statuspedido = "em entrega";
+        mostrar();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
+    public void mostrar(){
+    while(tabTipo.getRowCount()>0){  
+        tabTipo.removeRow(0);  
+    }
+    if (Informacoes.pedidos.isEmpty()){
+                JOptionPane.showMessageDialog(null, "nenhum pedido realizado");
+    }
+    else{
+
+        String[] linha = new String[] {null, null};
+        for(int j = 0; j < Informacoes.pedidos.size(); j++){
+            tabTipo.addRow(linha);
+            tabTipo.setValueAt(Informacoes.pedidos.get(j).prato, j, 0);
+            tabTipo.setValueAt(Informacoes.pedidos.get(j).quant, j, 1);
+            tabTipo.setValueAt(Informacoes.pedidos.get(j).statuspedido, j, 2);
+            
+        }
+    }
+    }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -138,6 +170,6 @@ public class AlterarStatusDosPedidos_Pedidos extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables
 }

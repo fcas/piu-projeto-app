@@ -4,6 +4,8 @@
  */
 package piu;
 
+import classes.Informacoes;
+import classes.Pedido;
 import javax.swing.ImageIcon;
 
 /**
@@ -41,7 +43,7 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
         button_Contato = new javax.swing.JButton();
         button_FazerLogin = new javax.swing.JButton();
         button_Cardapio = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        macarrao = new javax.swing.JLabel();
         im = new javax.swing.JLabel();
         label_Descricao3 = new javax.swing.JLabel();
         label_Descricao = new javax.swing.JLabel();
@@ -86,8 +88,8 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel1.setText("Macarrão");
+        macarrao.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        macarrao.setText("Macarrão");
 
         label_Descricao3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_Descricao3.setText("verde e molho à moda da casa ");
@@ -148,7 +150,7 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
                                 .addComponent(button_Contato))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(136, 136, 136)
-                        .addComponent(jLabel1))
+                        .addComponent(macarrao))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(59, 59, 59)
                         .addComponent(im))
@@ -188,7 +190,7 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
                     .addComponent(button_FazerLogin)
                     .addComponent(button_Contato))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1)
+                .addComponent(macarrao)
                 .addGap(18, 18, 18)
                 .addComponent(im)
                 .addGap(18, 18, 18)
@@ -235,6 +237,12 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
     }//GEN-LAST:event_spStateChanged
 
     private void button_AddPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_AddPedidoActionPerformed
+    Pedido p = new Pedido();
+        p.quant = mult;
+        p.valor = preco*mult;
+        p.prato = macarrao.getText();
+        Informacoes.pedidos.add(p);
+        
         new PedidoAdicionado().setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_button_AddPedidoActionPerformed
@@ -291,13 +299,13 @@ public class FazerPedidosMacarrao extends javax.swing.JFrame {
     private javax.swing.JButton button_FecharCompra;
     private javax.swing.JButton button_Inicio;
     private javax.swing.JLabel im;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel label_Descricao;
     private javax.swing.JLabel label_Descricao2;
     private javax.swing.JLabel label_Descricao3;
     private javax.swing.JLabel label_FazerPedidos;
     private javax.swing.JLabel label_Preco;
     private javax.swing.JLabel label_Qtd;
+    private javax.swing.JLabel macarrao;
     private javax.swing.JSpinner sp;
     private javax.swing.JTextField text_Preco;
     // End of variables declaration//GEN-END:variables

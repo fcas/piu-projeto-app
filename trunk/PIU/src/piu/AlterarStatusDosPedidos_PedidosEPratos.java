@@ -4,6 +4,8 @@
  */
 package piu;
 
+import classes.Informacoes;
+import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 
@@ -18,8 +20,9 @@ public class AlterarStatusDosPedidos_PedidosEPratos extends javax.swing.JFrame {
      */
     public AlterarStatusDosPedidos_PedidosEPratos() {
         initComponents();
+        mostrar();
     }
-    DefaultTableModel tabTipo = new DefaultTableModel(null, new String[] {"pedidos"}){   
+    DefaultTableModel tabTipo = new DefaultTableModel(null, new String[] {"pedido", "quant", "status"}){   
     public boolean isCellEditable(int rowIndex, int mColIndex){   
          return false;   
     }   
@@ -37,7 +40,7 @@ public class AlterarStatusDosPedidos_PedidosEPratos extends javax.swing.JFrame {
 
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        table = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -46,14 +49,19 @@ public class AlterarStatusDosPedidos_PedidosEPratos extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton2.setText("Alterar Status Para \"Em Entrega\"");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
-        jTable1.setModel(tabTipo);
-        jScrollPane1.setViewportView(jTable1);
+        table.setModel(tabTipo);
+        jScrollPane1.setViewportView(table);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Alterar Status Dos Pedidos");
 
-        jButton1.setText("Pedidos");
+        jButton1.setText("Pedidos e pratos");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -61,8 +69,18 @@ public class AlterarStatusDosPedidos_PedidosEPratos extends javax.swing.JFrame {
         });
 
         jButton3.setText("Alterar Status Para \"Pronto\"");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Liberar Para Despacho e Entrega");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -76,9 +94,6 @@ public class AlterarStatusDosPedidos_PedidosEPratos extends javax.swing.JFrame {
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(94, 94, 94)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addComponent(jButton4))
                     .addGroup(layout.createSequentialGroup()
@@ -87,7 +102,10 @@ public class AlterarStatusDosPedidos_PedidosEPratos extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addComponent(jButton3))
-                            .addComponent(jButton2))))
+                            .addComponent(jButton2)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addComponent(jButton1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -112,13 +130,47 @@ public class AlterarStatusDosPedidos_PedidosEPratos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new Pedidos().setVisible(true);
+        new PedidosEPratos().setVisible(true);
         this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Informacoes.pedidos.get(table.getSelectedRow()).statuspedido2 = "em entrega";
+        mostrar();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        Informacoes.pedidos.get(table.getSelectedRow()).statuspedido2 = "pronto";
+        mostrar();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        Informacoes.pedidos.remove(table.getSelectedRow());
+        mostrar();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public void mostrar(){
+    while(tabTipo.getRowCount()>0){  
+        tabTipo.removeRow(0);  
+    }
+    if (Informacoes.pedidos.isEmpty()){
+                JOptionPane.showMessageDialog(null, "nenhum pedido realizado");
+    }
+    else{
+
+        String[] linha = new String[] {null, null};
+        for(int j = 0; j < Informacoes.pedidos.size(); j++){
+            tabTipo.addRow(linha);
+            tabTipo.setValueAt(Informacoes.pedidos.get(j).prato, j, 0);
+            tabTipo.setValueAt(Informacoes.pedidos.get(j).quant, j, 1);
+            tabTipo.setValueAt(Informacoes.pedidos.get(j).statuspedido2, j, 2);
+            
+        }
+    }
+    }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -157,6 +209,6 @@ public class AlterarStatusDosPedidos_PedidosEPratos extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables
 }
