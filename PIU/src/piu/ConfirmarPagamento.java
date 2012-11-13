@@ -126,7 +126,7 @@ public class ConfirmarPagamento extends javax.swing.JFrame {
     }//GEN-LAST:event_button_InicioActionPerformed
 
     private void button_CardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_CardapioActionPerformed
-        new Pratos().setVisible(true);
+        new PratosNovo().setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_button_CardapioActionPerformed
 
