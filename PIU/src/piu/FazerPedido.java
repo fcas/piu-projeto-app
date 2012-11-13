@@ -23,6 +23,7 @@ public class FazerPedido extends javax.swing.JFrame {
         text_Preco.setText(preco*mult+"");
         prato.setText(Informacoes.prato.nome);
         descricao.setText(Informacoes.prato.descricao);
+        descricao.setEditable(false);
     }
         float preco = Float.parseFloat(Informacoes.prato.valor);
         float precoi = Float.parseFloat(Informacoes.prato.valor);
