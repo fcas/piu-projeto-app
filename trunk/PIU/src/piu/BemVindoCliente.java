@@ -177,7 +177,7 @@ public class BemVindoCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_button_FinalizarCompraActionPerformed
 
     private void button_EscolherOutroPratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_EscolherOutroPratoActionPerformed
-        new Pratos().setVisible(true);
+        new PratosNovo().setVisible(true);
         this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_button_EscolherOutroPratoActionPerformed
 
