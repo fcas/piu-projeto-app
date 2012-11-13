@@ -26,7 +26,7 @@ public class Cardapio extends javax.swing.JFrame {
     private static Connection con;
     private static Statement comando;
 
-    private void conectar() {
+    /*private void conectar() {
 
         try {
             con = ConFactory.conexao("jdbc:mysql://localhost/eplay", "eplay",
@@ -54,7 +54,7 @@ public class Cardapio extends javax.swing.JFrame {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
     public Cardapio() {
         initComponents();
