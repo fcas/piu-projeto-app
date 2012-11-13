@@ -4,11 +4,13 @@
  */
 package classes;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Dalay
  */
-public class Pedido {
+public class Pedido{
     public int quant;
     public float valor;
     public String prato;
