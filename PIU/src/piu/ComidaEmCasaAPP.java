@@ -4,6 +4,8 @@
  */
 package piu;
 
+import classes.Informacoes;
+import classes.serializa;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 
@@ -21,10 +23,11 @@ public class ComidaEmCasaAPP extends javax.swing.JFrame {
         cb.setMaximumRowCount(2);
         cb.setName("Endereço de entrega");
         im_ComidaEmCasaAPP.setIcon(imagem);
-        
+        Informacoes.pratos = s.deserializaLista();
         //CB = new JComboBox(ComboBox);
         
     }
+    serializa s = new serializa();
         ImageIcon imagem = new ImageIcon("src/imagens/I.jpg");
 
     /**
