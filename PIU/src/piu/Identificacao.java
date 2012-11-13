@@ -65,9 +65,10 @@ public class Identificacao extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(84, 84, 84)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1)
-                            .addComponent(jLabel1))))
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addComponent(jButton1)))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
